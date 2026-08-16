@@ -75,3 +75,20 @@ def isValid(s: str) -> bool:
 
 print(isValid("([])"))  
 print(isValid("([)]")) 
+
+def revrse_string(text: str) -> str:
+    stack = []
+    # pushing all the characters of string text in the list stack 
+    for char in text:
+        stack.append(char)
+
+    # poping characters until stack is empty
+    reversed_text = ""
+    while len(stack) > 0:
+        reversed_text = reversed_text + stack.pop()
+
+    return(reversed_text)
+
+print(revrse_string("hello"))
+
+
